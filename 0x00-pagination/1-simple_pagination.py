@@ -2,6 +2,10 @@
 """ Simple pagination
 """
 
+import csv
+import math
+from typing import List
+
 
 def index_range(page, page_size) -> tuple:
     """
@@ -12,11 +16,6 @@ def index_range(page, page_size) -> tuple:
     start_index = (page - 1) * page_size
     end_index = page * page_size
     return start_index, end_index
-
-
-import csv
-import math
-from typing import List
 
 
 class Server:
@@ -39,10 +38,11 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-            pass
+        pass
 
-    def get_page(self, page: int=1, page_size: int=10) -> List[List]:
-        """returns a page"""
+    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """returns a page
+        """
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
         self.dataset()
