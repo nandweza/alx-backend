@@ -46,15 +46,19 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 All your classes must inherit from BaseCaching defined below:
 
 $ cat base_caching.py
+
 #!/usr/bin/python3
+
 """ BaseCaching module
 """
 
 class BaseCaching():
+
     """ BaseCaching defines:
       - constants of your caching system
       - where your data are stored (in a dictionary)
     """
+
     MAX_ITEMS = 4
 
     def __init__(self):
