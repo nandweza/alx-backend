@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Get locale from request"""
+"""Parametrize templates"""
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_babel import Babel
-from requests import request
 
 app = Flask(__name__, template_folder='templates')
 babel = Babel(app)
@@ -21,7 +20,7 @@ app.config.from_object(Config)
 @app.route("/", methods=['GET'], strict_slashes=False)
 def index() -> str:
     """render template for Babel usage"""
-    return render_template('2-index.html')
+    return render_template('3-index.html')
 
 
 @babel.localeselector
